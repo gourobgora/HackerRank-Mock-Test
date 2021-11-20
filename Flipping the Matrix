@@ -1,4 +1,12 @@
-public static void main(String[] args)throws IOException {
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args)throws IOException {
         BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
         int t=Integer.parseInt(in.readLine());
         for(int t1=0;t1<t;t1++){
