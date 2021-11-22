@@ -1,0 +1,19 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class Solution{
+    public static void main(String[]args){
+        try(Scanner k = new Scanner(System.in)){
+            String[] info = k.nextLine().split(" ");
+            BigInteger[] sequence = new BigInteger[2];
+            sequence[0] = new BigInteger(info[0]);
+            sequence[1] = new BigInteger(info[1]);
+            int N = Integer.parseInt(info[2]);
+
+            for(int i = 2; i < N; i++){
+                sequence[i % 2] =  sequence[(i + 1) % 2].multiply(sequence[(i + 1) % 2]).add(sequence[i % 2]);
+            }
+            System.out.println(sequence[0].max(sequence[1]));
+        }
+    }
+}
